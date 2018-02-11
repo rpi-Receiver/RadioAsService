@@ -1,0 +1,14 @@
+[Unit]
+Description=Radio Service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStartPre=/usr/bin/sudo /bin/systemctl restart triggerhappy.service
+ExecStartPre=/usr/bin/sudo /usr/bin/ir-keytable p- nec -w /home/pi/samsung
+ExecStart=/usr/bin/radio -c
+SendSIGHUP=yes
+
+[Install]
+WantedBy=multi-user.target

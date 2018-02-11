@@ -1,0 +1,7 @@
+FREQUENCY 88.8
+VOLUME 100
+RADIODEVICE /dev/radio0
+ALSACARD hw:rpiReceiver
+ALSAMIXER Master
+ALSAIN hw:rpiReceiver,1
+ALSAOUT hw:rpiReceiver,0

@@ -9,6 +9,7 @@ make extra hardware buttons working
     sudo cp /lib/systemd/system/triggerhappy.service /etc/systemd/system
 
 change --user nobody to --user pi in
+
     sudo vi /etc/systemd/system/triggerhappy.service change  
 
 maybe you need to install following packages
